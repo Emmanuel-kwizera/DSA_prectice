@@ -19,17 +19,22 @@ int print_arr(int arr[],int n,int j,int k){
 }
 
 void print_subarrays(int arr[],int n,int i,int j) {  
+    // int array[n];
     if(i == n)
         return;
     if(j == n) 
 		return; 
     print_arr(arr,n,i,j);
+    // array[i] += print_arr(arr,n,i,j);
     if(j == n-1) 
 		print_subarrays(arr,n,i+1,i+1);
     else 
 		print_subarrays(arr,n,i,j+1);
 
+    // cout <<endl <<endl << "Array of sums: " <<endl;
+    // print_arr(array,n,i,j);
     // cout <<"\n \n \n " <<print_arr(arr,n,i,j);
+
 }
 
 bool check_Exsistance(int n , int array[], int size){
@@ -43,7 +48,7 @@ bool check_Exsistance(int n , int array[], int size){
 }
 
 int main(){
-    int arr[5] = {2,5,7,4},n = 4; 
+    // int arr[5] = {2,5,7,4},n = 4; 
       
     // cout << "All sub arrays of the array: " <<endl;
 
@@ -54,24 +59,24 @@ int main(){
     // std::cin >> number;
     // std::cout << "Does sub array sums containt [ " << number <<" ]" <<endl;
 
-    int x;
-    cout<<"     [ ";
-    for(int i=0;i<n;i++){
-        cout<<arr[i]<<" "; 
-    }
-    cout<<"] ";
+    // int x;
+    // cout<<"     [ ";
+    // for(int i=0;i<n;i++){
+    //     cout<<arr[i]<<" "; 
+    // }
+    // cout<<"] ";
 
-    while(1){
-        std::cout << "\n Enter a number to seach for : ";
-        std::cin >> x;
-        if(x == -1 )
-            exit(0);
-        else{
-            std::cout << "\n ======================================================= \n\t";
-            std::cout <<"Return of check_Exsistance: " << check_Exsistance(x,arr,n);
-            std::cout << "\n ======================================================= \n ";
-        }
-    }
+    // while(1){
+    //     std::cout << "\n Enter a number to seach for : ";
+    //     std::cin >> x;
+    //     if(x == -1 )
+    //         exit(0);
+    //     else{
+    //         std::cout << "\n ======================================================= \n\t";
+    //         std::cout <<"Return of check_Exsistance: " << check_Exsistance(x,arr,n);
+    //         std::cout << "\n ======================================================= \n ";
+    //     }
+    // }
 
     return EXIT_SUCCESS;
 }

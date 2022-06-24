@@ -53,6 +53,14 @@ void quickSortOnArray(int arr[], int start, int end)
 }
 
 int main(){
-
+    int arr[] = { 9, 3, 4, 2, 1, 8 };
+    int n = 6;
+ 
+    quickSortOnArray(arr, 0, n - 1);
+ 
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout<<endl;
     return EXIT_SUCCESS;
 }

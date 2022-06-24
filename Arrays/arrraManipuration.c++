@@ -2,7 +2,7 @@
 #include <iostream>
 using namespace std;
 
-int quickSortOnArray(int arr[],int start, int end){
+int partition(int arr[],int start, int end){
     int pivot = arr[start];
  
     int count = 0;
@@ -33,6 +33,23 @@ int quickSortOnArray(int arr[],int start, int end){
     }
  
     return pivotIndex;
+}
+
+void quickSortOnArray(int arr[], int start, int end)
+{
+ 
+    // base case
+    if (start >= end)
+        return;
+ 
+    // partitioning the array
+    int p = partition(arr, start, end);
+ 
+    // Sorting the left part
+    quickSortOnArray(arr, start, p - 1);
+ 
+    // Sorting the right part
+    quickSortOnArray(arr, p + 1, end);
 }
 
 int main(){

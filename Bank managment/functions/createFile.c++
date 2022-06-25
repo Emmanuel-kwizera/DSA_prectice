@@ -15,14 +15,12 @@ void createFile(){
     cout <<"\nEnter the Fee:";
     cin >>fee;
    
-    ofstream fout("d:/student.doc");
-   
+    ofstream fout("d:/student.doc");   
     fout <<rno <<"\t" <<name <<"\t" <<fee <<endl;   //write data to the file student
    
     fout.close();
    
-    ifstream fin("d:/student.doc");
-   
+    ifstream fin("d:/student.doc");   
     fin >>rno >>name >>fee;   //read data from the file student
    
     fin.close();

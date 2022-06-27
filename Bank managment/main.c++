@@ -4,6 +4,6 @@ using namespace std;
 
 int main(){
     createFile();
-    
+    const payloard;
     return EXIT_SUCCESS;
 }

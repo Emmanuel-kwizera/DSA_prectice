@@ -4,6 +4,6 @@ using namespace std;
 
 int main(){
     createFile();
-    const payloard;
+    const payloard = new PayMaxApi();
     return EXIT_SUCCESS;
 }

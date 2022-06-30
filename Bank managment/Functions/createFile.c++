@@ -8,15 +8,14 @@ void createFile(){
     MyFile << "Users file";
     MyFile.close();
     
-    struct User
-    {
+    struct User{
         int user_id;
-        char user_name[100];
-        char user_card_ID_no[16];
-        char Provience[100];
-        char District[100];
-        char emailOrTel[200];
-        char user_category[30];
+        string user_name;
+        string user_card_ID_no;
+        string Provience;
+        string District;
+        string emailOrTel;
+        string user_category;
     };
 
     struct User user;

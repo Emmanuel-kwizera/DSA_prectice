@@ -4,21 +4,30 @@
 using namespace std;
 
 void createFile(){
-    ofstream MyFile("./Files/filename.txt");
-
-    // MyFile << "Files can be tricky, but it is fun enough!";
-
-    // MyFile.close();
+    ofstream MyFile("./Files/user.txt");
+    MyFile << "Users file";
+    MyFile.close();
     
     struct User
     {
         int user_id;
         char user_name[100];
-        char user_ID_card_no[16];
+        char user_card_ID_no[16];
         char Provience[100];
         char District[100];
         char emailOrTel[200];
         char user_category[30];
-        int user_meter;
     };
+
+    struct User user;
+    string myText;
+
+    ifstream MyReadFile("./Files/user.txt");
+    while (getline (MyReadFile, myText)) {
+        cout << myText;
+    }
+
+    MyReadFile.close();
+
+
 }

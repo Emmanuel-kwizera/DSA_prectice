@@ -9,9 +9,9 @@
         ""
       ],
       "stopAtEntry": false,
-      "cwd": "/workspace/DSA_prectice/Arrays",
+      "cwd": "/workspace/DSA_prectice/Basics",
       "environment": [],
-      "program": "/workspace/DSA_prectice/Arrays/build/Debug/outDebug",
+      "program": "/workspace/DSA_prectice/Basics/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "/usr/bin/gdb",

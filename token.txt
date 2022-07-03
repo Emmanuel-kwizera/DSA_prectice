@@ -1,0 +1,12 @@
+for(string rowElement; ss>> rowElement;){
+        //     cout << "-["<< rowElement <<"]- "; 
+        //     if(rowElement[rowElement.length() - 1] == ',')
+        //         rowElement.pop_back();
+            
+        //     if(k == 0) user.id = stoi(rowElement);
+        //     else if(k==1) user.full_name = rowElement;
+        //     else if(k==2) user.username = rowElement;
+        //     else if(k==3) user.age = rowElement;
+
+        //     k++;
+        // }

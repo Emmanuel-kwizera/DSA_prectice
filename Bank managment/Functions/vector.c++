@@ -121,3 +121,25 @@ void delete_by_id(int id) {
     rename("./Files/temp_users.txt","./Files/users.txt");
 }
 
+static int adminDashMenu(){
+	int choice;
+	cout<<"\t       Welcometo the admin pannel Here is menu \n"; 
+	cout<<"\t_______________________________________________________\n\n\n";
+	cout<<"\n\t    I.0 USER MANAGMENT   \n";
+	cout<<"\t     1. Insert a new user \n";
+	cout<<"\t     2. view users \n";
+	cout<<"\t     3. Update user \n";
+	cout<<"\t     4. Delete user \n";
+	cout<<"\n\t    II.0 ACCOUNT MANAGMENT   \n";
+	cout<<"\t     5. Activate an acount \n";
+	cout<<"\t     6. De-activate an acount \n";
+	cout<<"\t     7. Register a new acount \n";
+	cout<<"\t     8. View availabe acounts \n";
+	cout<<"\n\t    III.0 PRICING MANAGMENT   \n";
+	// cout<<"\n\t    IV.0 REGISTRATION  \n";
+	// cout<<"\t     7. Insert a new client \n";
+	cout<<"\n\n\t_______________________________________________________\n\n";
+	cout<<"\t\t\t Enter your choice      : ";
+	cin>>choice;
+	return choice;
+}

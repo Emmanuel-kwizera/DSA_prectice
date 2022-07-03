@@ -27,7 +27,7 @@ void createFile(){
 
     // MyReadFile.close();
 
-    fstream file;./Files/Jacques.txt
+    fstream file;
 
     // file.open("./Files/Jacques.txt",ios::app | ios::out);
     // file<< "Hello World! ";

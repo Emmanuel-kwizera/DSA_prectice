@@ -4,7 +4,7 @@
 using namespace std;
 
 void createFile(){
-    ofstream MyFile("./Files/users.txt");
+    ofstream MyFile("./Files/user.txt");
     MyFile << "Users file";
     MyFile.close();
     
@@ -21,7 +21,7 @@ void createFile(){
     struct User user;
     string myText;
 
-    ifstream MyReadFile("./Files/users.txt");
+    ifstream MyReadFile("./Files/user.txt");
     while (getline (MyReadFile, myText)) {
         cout << myText;
     }

@@ -11,12 +11,12 @@ int main(){
         if(option == 1){
 			system("clear");
             User user;
-            string names;
+            string name;
             user.id = 0;
 
             cout << "Enter user full names: ";
-            getline(cin, names);
-            user.full_name = names;
+            getline(cin, user.full_name);
+            user.full_name = 
 
             cout<< "Enter user name: ";
             cin>> user.username;

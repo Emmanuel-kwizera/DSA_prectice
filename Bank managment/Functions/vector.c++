@@ -21,7 +21,11 @@ int next_id(){
     string line;
 
     while(getline(file,line)){
-        id++;
+        stringstream ss(line);
+            string id_as_string;
+
+            getline(ss, id_as_string, ',');
+            id = stoi(id_as_string) + 1;
     }
 
     file.close();
@@ -82,12 +86,12 @@ void delete_by_id(int id) {
     fstream file;
     file.open("./Files/temp_users.txt", ios::out | ios::app);
 
-    int next_id = 1;
+    // int next_id = 1;
 
     for(User user: users){
         if (user.id != id){
-            file << next_id << "," << user.full_name << "," <<user.username <<"," <<user.age << "\n";            
-            next_id++;
+            file << user.id << "," << user.full_name << "," <<user.username <<"," <<user.age << "\n";            
+            // next_id++;
         }
     }
 

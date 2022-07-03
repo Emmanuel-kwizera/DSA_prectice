@@ -76,6 +76,27 @@ int main(){
             update_by_id(id, user);
         }
 
+        else if(option == 4){
+            int id;
+            vector<User> users = get_all_user();
+
+	        cout<<"\t       List of all users in the system \n"; 
+	        cout<<"\t_______________________________________________________\n\n\n";
+            for(User user: users){
+                printf("\t User %d: \n", user.id);
+                cout<< "\t\t "<<user.full_name<<endl;
+                cout<< "\t\t "<<user.username<<endl;
+                cout<< "\t\t "<<user.age <<endl<<endl;
+            }
+	        cout<<"\n\t_______________________________________________________\n\n";
+            
+	        cout<<"\t\t\t Select a User      : ";
+	        cin>>id;
+
+            delete_by_id(id);
+        }
+
+
         cout<<"    Do you want to continue [1/0]  :";
 		cin>>cont;
 		if(cont == 0){

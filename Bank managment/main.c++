@@ -4,22 +4,15 @@
 using namespace std;
 
 int main(){ 
-    // User user {0,"John Doe", "John", "30"};
-    // insert_in_file(user);  
-    // delete_by_id(2);
-    // vector<User> users = get_all_user();
-    // for(User user: users){
-    //     printf("User %d: \n", user.id);
-    //     cout<< "\t\t"<<user.full_name<<endl;
-    //     cout<< "\t\t"<<user.username<<endl;
-    //     cout<< "\t\t"<<user.age <<endl;
-    // }
     int option= adminDashMenu();    
 	int cont;
+
     do{
         if(option == 1){
+			system("clear");
             User user;
             user.id = 0;
+
             cout << "Enter user full names: ";
             getline(cin, user.full_name);
 
@@ -33,6 +26,7 @@ int main(){
         }
         
         else if(option == 2 ){
+			system("clear");
             vector<User> users = get_all_user();
 	        cout<<"\t       List of all users in the system \n"; 
 	        cout<<"\t_______________________________________________________\n\n\n";
@@ -46,6 +40,7 @@ int main(){
         }
 
         else if(option == 3){
+			system("clear");
             int id;
             vector<User> users = get_all_user();
 
@@ -77,9 +72,10 @@ int main(){
         }
 
         else if(option == 4){
+			system("clear");
             int id;
             vector<User> users = get_all_user();
-
+            
 	        cout<<"\t       List of all users in the system \n"; 
 	        cout<<"\t_______________________________________________________\n\n\n";
             for(User user: users){

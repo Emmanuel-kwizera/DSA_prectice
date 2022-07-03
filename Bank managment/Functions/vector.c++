@@ -22,10 +22,9 @@ int next_id(){
 
     while(getline(file,line)){
         stringstream ss(line);
-            string id_as_string;
-
-            getline(ss, id_as_string, ',');
-            id = stoi(id_as_string) + 1;
+        string id_as_string;
+        getline(ss, id_as_string, ',');
+        id = stoi(id_as_string) + 1;
     }
 
     file.close();
@@ -77,7 +76,28 @@ vector<User> get_all_user(){
         }
         users.push_back(user);
     }
+    file.close();
     return users;
+}
+
+void update_by_id(int id, User newInfo) {
+    vector<User> users = get_all_user();
+
+    fstream file;
+    file.open("./Files/temp_users.txt", ios::out | ios::app);
+
+    for(User user: users){
+        if (user.id != id){
+            file <<user.id << "," <<user.full_name << "," <<user.username <<"," <<user.age << "\n";
+        }else{
+            file <<id << "," <<newInfo.full_name << "," <<newInfo.username <<"," <<newInfo.age << "\n";
+        }
+    }
+
+    file.close();
+
+    remove("./Files/users.txt");
+    rename("./Files/temp_users.txt","./Files/users.txt");
 }
 
 void delete_by_id(int id) {
@@ -94,6 +114,8 @@ void delete_by_id(int id) {
             // next_id++;
         }
     }
+
+    file.close();
 
     remove("./Files/users.txt");
     rename("./Files/temp_users.txt","./Files/users.txt");

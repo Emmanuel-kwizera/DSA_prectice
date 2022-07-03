@@ -21,7 +21,7 @@ int main(){
             User user;
             user.id = 0;
             cout << "Enter user full names: ";
-            getline(cin,user.full_name);
+            getline(cin, user.full_name);
 
             cout<< "Enter user name: ";
             cin>> user.username;
@@ -30,9 +30,10 @@ int main(){
             cin>> user.age;
 
             insert_in_file(user);
-        }else if(option == 2 ){
+        }
+        
+        else if(option == 2 ){
             vector<User> users = get_all_user();
-	        cout<<"\n\t_______________________________________________________\n\n";
 	        cout<<"\t       List of all users in the system \n"; 
 	        cout<<"\t_______________________________________________________\n\n\n";
             for(User user: users){
@@ -42,6 +43,37 @@ int main(){
                 cout<< "\t\t "<<user.age <<endl<<endl;
             }
 	        cout<<"\n\t_______________________________________________________\n\n";
+        }
+
+        else if(option == 3){
+            int id;
+            vector<User> users = get_all_user();
+
+	        cout<<"\t       List of all users in the system \n"; 
+	        cout<<"\t_______________________________________________________\n\n\n";
+            for(User user: users){
+                printf("\t User %d: \n", user.id);
+                cout<< "\t\t "<<user.full_name<<endl;
+                cout<< "\t\t "<<user.username<<endl;
+                cout<< "\t\t "<<user.age <<endl<<endl;
+            }
+	        cout<<"\n\t_______________________________________________________\n\n";
+            
+	        cout<<"\t\t\t Select a User      : ";
+	        cin>>id;
+
+            User user;
+            user.id = 0;
+            cout << "Enter user full names: ";
+            getline(cin,user.full_name);
+
+            cout<< "Enter user name: ";
+            cin>> user.username;
+
+            cout<< "Enter user age: ";
+            cin>> user.age;
+
+            update_by_id(id, user);
         }
 
         cout<<"    Do you want to continue [1/0]  :";

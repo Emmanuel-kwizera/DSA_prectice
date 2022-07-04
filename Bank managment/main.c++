@@ -20,7 +20,7 @@ int main(){
 
     do{
         if(option == 1){
-			// system("clear");
+			system("clear");
             User user;
             // string name;
             user.id = 0;
@@ -39,7 +39,7 @@ int main(){
         }
         
         else if(option == 2 ){
-			// system("clear");
+			system("clear");
             vector<User> users = get_all_user();
 	        cout<<"\t       List of all users in the system \n"; 
 	        cout<<"\t_______________________________________________________\n\n\n";
@@ -53,7 +53,7 @@ int main(){
         }
 
         else if(option == 3){
-			// system("clear");
+			system("clear");
             int id;
             vector<User> users = get_all_user();
 
@@ -85,7 +85,7 @@ int main(){
         }
 
         else if(option == 4){
-			// system("clear");
+			system("clear");
             int id;
             vector<User> users = get_all_user();
             
@@ -111,7 +111,7 @@ int main(){
 		if(cont == 0){
 			option = -1;
 		}else{
-			// system("clear");
+			system("clear");
 			option = adminDashMenu();
 		}
     }while(option != -1);

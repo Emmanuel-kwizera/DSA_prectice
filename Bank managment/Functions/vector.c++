@@ -80,6 +80,45 @@ vector<User> get_all_user(){
     return users;
 }
 
+vector<User> get_user_by_id(int id){
+
+    fstream file;
+    file.open("./Files/users.txt",ios::in);
+
+    vector<User> users;
+
+    string line;
+
+    while(getline(file,line)){
+        User user;
+            stringstream ss(line);
+            int k = 0;
+            while(ss.good()) {
+                string substr;
+
+                getline(ss, substr, ',');
+                if(k == 0){
+                    user.id = stoi(substr);
+                } 
+                else if(k==1) {
+                    user.full_name = substr;
+                } 
+                else if(k==2){
+                    user.username = substr;
+                }
+                else if(k==3){
+                    user.age = substr;
+                }
+                k++;
+            }
+        if(user.id == id){
+            users.push_back(user);
+        }
+    }
+    file.close();
+    return users;
+}
+
 void update_by_id(int id, User newInfo) {
     vector<User> users = get_all_user();
 
